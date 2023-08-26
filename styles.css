@@ -3,8 +3,8 @@ body {
   color: rgb(54, 255, 47);
   font-family: "Russo One", sans-serif;
   font-size: 50px;
+  min-width: auto;
 }
-
 
 button {
   background-color: rgb(54, 255, 47);
@@ -16,14 +16,30 @@ button {
 
 .clockCase,
 .buttonCase {
+  min-width: auto;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
 }
 
-#start:active{
+#start:active {
   background-color: rgb(255, 255, 255);
 }
-#stop:active{
+#stop:active {
   background-color: rgb(255, 52, 2);
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    font-size: 35px;
+  }
+  .buttonCase {
+    font-size: 5px;
+  }
+  #clock{
+    text-align: center;
+  }
+  button {
+    padding: 10px;
+  }
 }
