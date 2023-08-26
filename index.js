@@ -24,15 +24,20 @@ function updateClock() {
     clock.textContent = hours + ':' + minutes + ':' + seconds;
 } */
 let timerId;
+let isRunning = false;
 
 const startButton = document.getElementById("start");
 startButton.addEventListener("click", function () {
-  timerId = setInterval(updateClock, 1000);
+  if (!isRunning) {
+    timerId = setInterval(updateClock, 1000);
+    isRunning = true;
+  }
 });
 
 const stopButton = document.getElementById("stop");
 stopButton.addEventListener("click", function () {
   clearInterval(timerId);
+  isRunning = false;
 });
 
 function updateClock() {

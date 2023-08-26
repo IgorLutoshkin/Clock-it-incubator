@@ -20,8 +20,10 @@ button {
   justify-content: center;
   gap: 10px;
 }
-#start:hover,
-#stop:hover {
-  cursor: pointer;
-  background-color: rgb(216, 72, 5);
+
+#start:active{
+  background-color: rgb(255, 255, 255);
+}
+#stop:active{
+  background-color: rgb(255, 52, 2);
 }
