@@ -17,7 +17,6 @@ stopButton.addEventListener("click", function () {
 
 function updateClock() {
   const clock = document.getElementById("clock");
-  // НУЖНО ПОГУГЛИТЬ ЧТО ТАКОЕ new Date()
   let now = new Date();
   let hours = now.getHours();
   let minutes = now.getMinutes();
